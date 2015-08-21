@@ -6,7 +6,7 @@
  
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('/var/www/html/Symfony/src/Ens/JobeetBundle/Resources/public/css/directory/job.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('bundles/ensjobeet/css/jobs.css') }}" type="text/css" media="all" />
 {% endblock %}
  
 {% block content %}
@@ -21,7 +21,7 @@
       {% if entity.logo %}
         <div class="logo">
           <a href="{{ entity.url }}">
-            <img src="/upload/jobs/{{ entity.logo }}"
+            <img src="{{ asset('uploads/jobs/' ~ entity.logo) }}"
               alt="{{ entity.company }} logo" />
           </a>
         </div>
