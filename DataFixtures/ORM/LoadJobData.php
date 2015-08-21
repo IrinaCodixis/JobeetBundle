@@ -1,3 +1,4 @@
+<?php
 namespace Ens\JobeetBundle\DataFixtures\ORM;
  
 use Doctrine\Common\Persistence\ObjectManager;
@@ -52,3 +53,4 @@ class LoadJobData extends AbstractFixture implements OrderedFixtureInterface
     return 2; // the order in which fixtures will be loaded
   }
 }
+?>
