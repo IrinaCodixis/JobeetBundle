@@ -25,7 +25,7 @@ class JobController extends Controller
 
         $query = $em->createQuery(
 		'SELECT j FROM EnsJobeetBundle:Job j WHERE j.created_at > :date'
-		)->setParameter('date', date('Y-m-d H:i:s', time() - 86400 * 30));
+		)->setParameter('date', date('Y-m-d H:i:s', time()));
 		$entities = $query->getResult();
  
 
