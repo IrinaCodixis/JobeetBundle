@@ -28,6 +28,8 @@ class Category
      * @var \Doctrine\Common\Collections\Collection
      */
     private $category_affiliates;
+	
+	private $active_jobs;
 
     /**
      * Constructor
@@ -140,5 +142,15 @@ class Category
    public function __toString()	
    {
  	 return $this->getName();
+   }
+   
+   public function setActiveJobs($jobs)
+   {
+    $this->active_jobs = $jobs;
+   }
+ 
+   public function getActiveJobs()
+   {
+    return $this->active_jobs;
    }
 }
