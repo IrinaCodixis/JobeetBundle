@@ -23,10 +23,7 @@ class JobController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $query = $em->createQuery(
-		'SELECT j FROM EnsJobeetBundle:Job j WHERE j.created_at > :date'
-		)->setParameter('date', date('Y-m-d H:i:s', time()));
-		$entities = $query->getResult();
+         $entities = $em->getRepository('EnsJobeetBundle:Job')->findAll();
  
 
         return $this->render('EnsJobeetBundle:Job:index.html.twig', array(
