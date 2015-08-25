@@ -27,7 +27,7 @@ class JobController extends Controller
  
 		  foreach($categories as $category)
 		  {
-			$category->setActiveJobs($em->getRepository('EnsJobeetBundle:Job')->getActiveJobs($category->getId()));
+			$category->setActiveJobs($em->getRepository('EnsJobeetBundle:Job')->getActiveJobs($category->getId(), 10));
 		  }
  
  
