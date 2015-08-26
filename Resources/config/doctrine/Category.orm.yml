@@ -2,7 +2,7 @@
 
 Ens\JobeetBundle\Entity\Category:
     type: entity
-    repositoryClass: Ena\JobeetBundle\Repository\CategoryRepository
+    repositoryClass: Ens\JobeetBundle\Repository\CategoryRepository
     table: category
     id:
        id:
