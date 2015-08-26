@@ -25,3 +25,4 @@ Ens\JobeetBundle\Entity\Category:
       mappedBy: category
     lifecycleCallbacks:
       prePersist: [ setSlugValue ]
+      preUpdate: [ setSlugValue ]
