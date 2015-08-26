@@ -157,10 +157,6 @@ class Category
     return $this->active_jobs;
    }
    
-    public function getSlug()
-   {
-    return $this->getName();
-   }
    
    public function setMoreJobs($jobs)
    {
