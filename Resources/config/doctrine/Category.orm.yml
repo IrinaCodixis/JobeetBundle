@@ -1,4 +1,3 @@
-# src/Ens/JobeetBundle/Resources/config/doctrine/Category.orm.yml
 Ens\JobeetBundle\Entity\Category:
   type: entity
   repositoryClass: Ens\JobeetBundle\Repository\CategoryRepository
