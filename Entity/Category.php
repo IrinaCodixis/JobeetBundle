@@ -3,7 +3,7 @@
 namespace Ens\JobeetBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Ens\JobeetBundle\Utils\Jobeet;
+use Ens\JobeetBundle\Utils\Jobeet as Jobeet;
 
 /**
  * Category
@@ -159,7 +159,7 @@ class Category
    
     public function getSlug()
    {
-    return Jobeet::slugify($this->getName());
+    return $this->getName();
    }
    
    public function setMoreJobs($jobs)
