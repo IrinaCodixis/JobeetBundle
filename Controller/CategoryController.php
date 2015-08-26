@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
 	public function showAction($slug)
 	{
-		$em = $this->getDoctrine()->getManager();
+		$em = $this->getDoctrine()->getEntityManager();
 	 
 		$category = $em->getRepository('EnsJobeetBundle:Category')->findOneBySlug($slug);
 	 
