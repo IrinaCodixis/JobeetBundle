@@ -5,4 +5,8 @@ EnsJobeetBundle_job:
 EnsJobeetBundle_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: EnsJobeetBundle:Default:index }
+	
+EnsJobeetBundle_category:
+    pattern:  /category/{slug}
+    defaults: { _controller: EnsJobeetBundle:Category:show }
 
