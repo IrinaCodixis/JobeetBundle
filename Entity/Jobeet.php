@@ -1,4 +1,4 @@
-namespace Ens\JobeetBundle\Utils;
+namespace Ens\JobeetBundle\Entity;
 class Jobeet
 {
     static public function slugify($text)
