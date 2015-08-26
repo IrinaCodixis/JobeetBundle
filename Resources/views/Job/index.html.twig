@@ -32,7 +32,7 @@
 	  
 	  {% if category.morejobs %}
             <div class="more_jobs">
-              and <a href="{{ path('EnsJobeetBundle_category', { 'slug': entity.categoryslug }) }}">{{ category.morejobs }}</a>
+              and <a href="{{ path('EnsJobeetBundle_category', { 'slug': categoryslug }) }}">{{ category.morejobs }}</a>
               more...
             </div>
       {% endif %}
