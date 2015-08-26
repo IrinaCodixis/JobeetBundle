@@ -197,9 +197,10 @@ class Category
     }
     /**
      * @ORM\PrePersist
+	 * @ORM\preUpdate
      */
     public function setSlugValue()
     {
-        // Add your code here
+        $this->slug = Jobeet::slugify($this->getName());
     }
 }
