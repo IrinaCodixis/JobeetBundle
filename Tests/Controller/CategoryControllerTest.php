@@ -1,16 +1,20 @@
 <?php
-namespace Ens\JobeetBundle\Tests\Controller;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
  
-class CategoryControllerTest extends WebTestCase
+class JobControllerTest extends WebTestCase
 {
-  public function testShow()
+  public function testIndex()
   {
     $client = static::createClient();
  
-    $crawler = $client->request('GET', '/category/index');
-    $this->assertEquals('Ens\JobeetBundle\Controller\CategoryController::showAction', $client->getRequest()->attributes->get('_controller'));
-    $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+    $crawler = $client->request('GET', '/');
+    $this->assertEquals('Ens\JobeetBundle\Controller\JobController::indexAction', $client->getRequest()->attributes->get('_controller'));
+    $this->assertTrue($crawler->filter('.jobs td.position:contains("Expired")')->count() == 0);
+  
+  $kernel = static::createKernel();
+  $kernel->boot();
+  $max_jobs_on_homepage = $kernel->getContainer()->getParameter('max_jobs_on_homepage');
+  $this->assertTrue($crawler->filter('.category_programming tr')->count() 
   }
 }
 ?>
