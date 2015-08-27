@@ -1,3 +1,4 @@
+<?php
 namespace Ens\JobeetBundle\Tests\Utils;
 use Ens\JobeetBundle\Utils\Jobeet;
  
@@ -13,3 +14,5 @@ class JobeetTest extends \PHPUnit_Framework_TestCase
     $this->assertEquals('sensio', Jobeet::slugify('sensio  '));
   }
 }
+
+?>
