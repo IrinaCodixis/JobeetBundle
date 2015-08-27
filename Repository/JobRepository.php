@@ -72,3 +72,4 @@ class JobRepository extends EntityRepository
 		return $query->getSingleScalarResult();
     }
 }
+?>
