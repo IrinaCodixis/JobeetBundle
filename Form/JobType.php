@@ -14,24 +14,18 @@ class JobType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder
-            ->add('type')
-            ->add('company')
-            ->add('logo')
-            ->add('url')
-            ->add('position')
-            ->add('location')
-            ->add('description')
-            ->add('how_to_apply')
-            ->add('token')
-            ->add('is_public')
-            ->add('is_activated')
-            ->add('email')
-            ->add('expires_at')
-            ->add('created_at')
-            ->add('updated_at')
-            ->add('category')
-        ;
+        $builder->add('category');
+        $builder->add('type', 'choice', array('choices' => Job::getTypes(), 'expanded' => true)););
+        $builder->add('company');
+        $builder->add('logo', null, array('label' => 'Company logo'));
+        $builder->add('url');
+        $builder->add('position');
+        $builder->add('location');
+        $builder->add('description');
+        $builder->add('how_to_apply', null, array('label' => 'How to apply?'));
+        $builder->add('token');
+        $builder->add('is_public', null, array('label' => 'Public?'));
+        $builder->add('email');
     }
     
     /**
@@ -49,6 +43,6 @@ class JobType extends AbstractType
      */
     public function getName()
     {
-        return 'ens_jobeetbundle_job';
+        return 'ens_jobeetbundle_jobtype';
     }
 }
