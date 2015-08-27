@@ -5,6 +5,7 @@ namespace Ens\JobeetBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Ens\JobeetBundle\Entity\Job;
 
 class JobType extends AbstractType
 {
@@ -15,7 +16,7 @@ class JobType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('category');
-        $builder->add('type', 'choice', array('choices' => Ens\JobeetBundle\Entity\Job::getTypes(), 'expanded' => true));
+        $builder->add('type', 'choice', array('choices' => Job::getTypes(), 'expanded' => true));
         $builder->add('company');
         $builder->add('logo', null, array('label' => 'Company logo'));
         $builder->add('url');
