@@ -7,6 +7,6 @@ EnsJobeetBundle_homepage:
     defaults: { _controller: EnsJobeetBundle:Default:index }
 
 EnsJobeetBundle_category:
-    pattern:  /category/{slug}
-    defaults: { _controller: EnsJobeetBundle:Category:show }
+    pattern: /category/{slug}/{page}
+    defaults: { _controller: EnsJobeetBundle:Category:show, page: 1 }
 
