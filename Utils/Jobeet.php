@@ -1,3 +1,4 @@
+<?php
 namespace Ens\JobeetBundle\Utils;
 class Jobeet
 {
@@ -12,3 +13,5 @@ class Jobeet
         return $text;
     }
 }
+
+?>
