@@ -204,5 +204,3 @@ class Category
         $this->slug = $this->getName();
     }
 }
-
-?>
