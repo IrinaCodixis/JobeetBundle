@@ -40,12 +40,12 @@ class JobController extends Controller
      * Creates a new Job entity.
      *
      */
-    public function createAction(Request $request)
+    public function createAction()
     {
         $entity  = new Job();
 		$request = $this->getRequest();
 		$form    = $this->createForm(new JobType(), $entity);
-		$form->bindRequest($request);
+		$form->bind($request);
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
