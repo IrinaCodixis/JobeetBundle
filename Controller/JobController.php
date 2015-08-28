@@ -50,17 +50,14 @@ class JobController extends Controller
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             
-			$entity->file->move(__DIR__.'/../../../../web/uploads/jobs', $entity->file->getClientOriginalName());
-			$entity->setLogo($entity->file->getClientOriginalName());
-			
 			$em->persist($entity);
             $em->flush();
 
             return $this->redirect($this->generateUrl('ens_job_show', array(
-			  'company' => $entity->getCompanySlug(),
-			  'location' => $entity->getLocationSlug(),
+			//  'company' => $entity->getCompanySlug(),
+			//  'location' => $entity->getLocationSlug(),
 			  'id' => $entity->getId(),
-			  'position' => $entity->getPositionSlug()
+			//  'position' => $entity->getPositionSlug()
 			)));
         }
 
