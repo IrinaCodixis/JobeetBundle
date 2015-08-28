@@ -24,7 +24,6 @@ class JobType extends AbstractType
         $builder->add('location');
         $builder->add('description');
         $builder->add('how_to_apply', null, array('label' => 'How to apply?'));
-        $builder->add('token');
         $builder->add('is_public', null, array('label' => 'Public?'));
         $builder->add('email');
     }
