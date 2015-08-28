@@ -276,7 +276,7 @@ class JobController extends Controller
 		$em->persist($entity);
 		$em->flush();
 	 
-		$this->get('session')->setFlashBag() ->add('notice', 'Your job is now online for 30 days.');
+		$this->get('session')->getFlashBag() ->add('notice', 'Your job is now online for 30 days.');
 	  }
 	 
 		  return $this->redirect($this->generateUrl('ens_job_preview', array(
