@@ -40,7 +40,7 @@ class JobController extends Controller
      * Creates a new Job entity.
      *
      */
-    public function createAction()
+    public function createAction(Request $request)
     {
         $entity  = new Job();
 		$request = $this->getRequest();
